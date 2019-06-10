@@ -1,2 +1,2 @@
-$('.profile-text').text('I am a web developer');
-$('.profile-header').html('Student <span>Profile</span>');
+// document.querySelector('.profile-header').style.display = 'none';
+$('.profile-header').hide().delay(2000).fadeIn();
