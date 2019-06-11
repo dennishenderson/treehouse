@@ -1,13 +1,20 @@
+const $spoilerDiv = $('.spoiler');
+const $spoilerSpan = $('.spoiler span');
+
+// Create the "Revela Spoiler" button
+const $buttonCreate = $('<button>Reveal Spoiler</button>');
+// Append to web page
+$spoilerDiv.append($buttonCreate);
+
+const $spoilerButton = $('.spoiler button');
+
 //Hide the spoiler text
-$('.spoiler span').hide();
-// When the button is pressed 
-$('.spoiler button').click(function(){
+$spoilerSpan.hide();
+// When the button is pressed
+$spoilerButton.click(function(){
   //Show the spoiler text
-  $('.spoiler span').show();
+  $spoilerSpan.show();
   //Hide the "Reveal Spoiler" button
-  $('.spoiler button').hide();
+  $spoilerButton.hide();
+  $('img').css('filter', 'blur(3px)');
 });
-
-
-
-
