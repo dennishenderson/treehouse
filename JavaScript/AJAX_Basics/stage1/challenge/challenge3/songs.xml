@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<songs>
+  <song>
+    <title>My Way</title>
+    <artist>Frank Sinatra</artist>
+  </song>
+  <song>
+    <title>Hotel California</title>
+    <artist>Eagles</artist>
+  </song>
+  <song>
+    <title>Californication</title>
+    <artist>Red Hot Chili Peppers</artist>
+  </song>
+  <song>
+    <title>Scar Tissue</title>
+    <artist>Red Hot Chili Peppers</artist>
+  </song>
+</songs>
