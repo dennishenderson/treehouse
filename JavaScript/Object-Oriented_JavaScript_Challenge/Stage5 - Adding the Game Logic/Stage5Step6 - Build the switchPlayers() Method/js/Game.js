@@ -4,18 +4,18 @@ class Game {
         this.players = this.createPlayers();
         this.ready = false;
     }
-    
-    
-    /** 
+
+
+    /**
      * Returns active player.
      * @return  {Object}    player - The active player.
      */
 	get activePlayer() {
         return this.players.find(player => player.active);
 	}
-    
-    
-    /** 
+
+
+    /**
      * Creates two player objects
      * @return  {array}    An array of two player objects.
      */
@@ -24,18 +24,18 @@ class Game {
                          new Player('Player 2', 2, '#e59a13')];
         return players;
     }
-    
-    
-    /** 
-     * Initializes game. 
+
+
+    /**
+     * Initializes game.
      */
     startGame(){
         this.board.drawHTMLBoard();
         this.activePlayer.activeToken.drawHTMLToken();
         this.ready = true;
     }
-	
-	
+
+
     /**
 	 * Branches code, depending on what key player presses
 	 * @param	{Object}	e - Keydown event object
@@ -51,7 +51,7 @@ class Game {
             }
         }
     }
-    
+
 
     /**
      * Finds Space object to drop Token into, drops Token
@@ -70,7 +70,16 @@ class Game {
 
         if (targetSpace !== null) {
             game.ready = false;
-    		activeToken.drop(targetSpace);   
-        }              
+    		activeToken.drop(targetSpace);
+        }
+    }
+
+    /**
+     * Switches active player.
+     */
+    switchPlayers() {
+      for (const player of this.players) {
+          player.active = !player.active;
+      }
     }
 }
