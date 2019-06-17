@@ -12,6 +12,19 @@ let teachers = [
     { name: 'Alena', comments: 'Appending', rating: 8 }
 ];
 
+// ES5 gave us forEach loops...
+console.log('...forEach begin...');
+teachers.forEach(teacher => {
+  console.log(teacher.name);
+  if (teacher.name === 'Nick') {
+    console.log(teacher.rating);
+  }
+})
+console.log('...forEach end...');
+
+// ES6 gave us for of and for in loops.
+// for of loops can't be used on objects but for in can.
+console.log('...for of begin...');
 for (let teacher of teachers) {
   console.log(teacher.name);
   if (teacher.name === 'Nick') {
@@ -19,5 +32,4 @@ for (let teacher of teachers) {
     break;
   }
 }
-  
-  
+console.log('...for of end...');
